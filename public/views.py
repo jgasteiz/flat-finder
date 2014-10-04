@@ -1,3 +1,4 @@
+from django.conf import settings
 from django.shortcuts import render
 from django.views.generic import FormView
 
@@ -5,7 +6,6 @@ import requests
 
 from core.forms import SearchForm
 
-ZOOPLA_API_KEY = 'n4knjxcw6jwa2amcf9tqfu3q'
 ZOOPLA_API_URL = 'http://api.zoopla.co.uk/api/v1/'
 ZOOPLA_LISTINGS = 'property_listings.json'
 
@@ -16,7 +16,7 @@ class Home(FormView):
 
     def form_valid(self, form):
         payload = dict(
-            api_key=ZOOPLA_API_KEY,
+            api_key=settings.ZOOPLA_API_KEY,
             area=form.cleaned_data.get('area'),
             listing_status=form.cleaned_data.get('listing_status')
         )

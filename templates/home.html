@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+    <div class="row">
+        <div class="col-sm-3">
+            <div class="well">
+                {% crispy form %}
+            </div>
+        </div>
+        <div class="col-sm-9">
+            {% if results %}
+                <h1>Search results</h1>
+
+                <strong>Area: </strong>{{ results.area_name }}, {{ results.country }}
+
+                <ul>
+                {% for result in results.listing %}
+                    <li>
+                        <p>
+                            <h3><span class="label label-danger">£{{ result.rental_prices.per_month }}</span> per month</h3>
+                        </p>
+                        <p><strong>Num bedrooms: </strong>{{ result.num_bedrooms }}</p>
+                        <p><strong>Address: </strong>{{ result.displayable_address }}</p>
+                        <p><strong>Description: </strong>{{ result.description }}</p>
+                        <p><strong>Details url: </strong><a href="{{ result.details_url }}">See in Zoopla</a></p>
+                    </li>
+                {% endfor %}
+                </ul>
+
+            {% else %}
+                <h1>Search something!</h1>
+            {% endif %}
+        </div>
+    </div>
+
+{% endblock %}

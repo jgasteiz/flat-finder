@@ -5,5 +5,6 @@ urlpatterns = patterns(
     'public.views',
 
     url(r'^admin/', include(admin.site.urls)),
+
     url(r'^$', 'home', name='home'),
 )

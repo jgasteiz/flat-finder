@@ -7625,3 +7625,9 @@ td.visible-print {
 body {
   margin-top: 80px;
 }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/javi\/dev\/flatfinder\/static\/scss\/main\.scss}line{font-family:\000037}}
+#map {
+  height: 600px;
+  width: 100%;
+}

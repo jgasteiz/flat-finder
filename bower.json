@@ -14,14 +14,10 @@
     "tests"
   ],
   "dependencies": {
+    "backbone": "",
     "jquery": "",
     "sass-bootstrap": "",
     "underscore": "",
-    "angular": "~1.2.23",
-    "angular-route": "~1.2.23",
-    "angular-resource": "~1.2.23",
-    "angular-bootstrap": "~0.11.0",
-    "ui-bootstrap": "~0.11.0",
     "moment": "~2.8.3",
     "moment-duration-format": "~1.3.0"
   }

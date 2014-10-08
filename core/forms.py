@@ -11,6 +11,7 @@ class SearchForm(forms.ModelForm):
     class Meta:
         fields = (
             'area',
+            'postcode',
             # 'country',
             'radius',
             # 'latitude',

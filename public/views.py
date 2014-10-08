@@ -35,6 +35,7 @@ class Home(FormView):
             api_key=settings.ZOOPLA_API_KEY,
             page_size=PAGE_SIZE,
             area=form.cleaned_data.get('area'),
+            postcode=form.cleaned_data.get('postcode'),
             listing_status=form.cleaned_data.get('listing_status'),
             order_by=form.cleaned_data.get('order_by'),
             ordering=form.cleaned_data.get('ordering'),

@@ -12,11 +12,14 @@
         {% crispy form %}
     </div>
 
-    {% if results_json %}
-        <script>
-            var ff = ff || {};
-            ff.results = {{ results_json|safe }};
-        </script>
-    {% endif %}
+{% endblock %}
 
+{% block extra_js %}
+    <script>
+        {% if results_json %}
+        ff.results = {{ results_json|safe }};
+        {% else %}
+        ff.results = {};
+        {% endif %}
+    </script>
 {% endblock %}

@@ -42,7 +42,14 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCQlTBbDgXcuBBqONOzGJvkwSz5VL_v2qY" type="text/javascript"></script>
     <script src="{% static 'lib/jquery/dist/jquery.js' %}"></script>
     <script src="{% static 'lib/underscore/underscore.js' %}"></script>
-    <script src="{% static 'js/search.js' %}"></script>
+    <script src="{% static 'lib/backbone/backbone.js' %}"></script>
+
+    <script src="{% static 'js/app.js' %}"></script>
+
+    {% block extra_js %}{% endblock %}
+
+    <script src="{% static 'js/models.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
 
 </body>
 </html>

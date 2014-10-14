@@ -20,13 +20,15 @@
 
             var that = this;
             google.maps.event.addListener(this.marker, 'click', function() {
+
                 if (ff.infowindow) {
                     ff.infowindow.close();
                 }
                 var template = _.template($('#property-template').html());
+
                 ff.infowindow = new google.maps.InfoWindow({
                     pixelOffset: new google.maps.Size(-16, -85),
-                    content: template({property: property})
+                    content: template({property: that.attributes})
                 });
                 ff.infowindow.open(map, that.marker);
             });

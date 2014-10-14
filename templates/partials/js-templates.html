@@ -3,7 +3,7 @@
     <h3><span class="label label-danger">£<%= property.rental_prices.per_month %></span> per month</h3>
     <p><strong>Num bedrooms: </strong><%= property.num_bedrooms %></p>
     <p><strong>Address: </strong><%= property.displayable_address %></p>
-    <p><strong>Details url: </strong><a href="<%= property.details_url %>">See in Zoopla</a></p>
+    <p><strong>Details url: </strong><a target="_blank" href="<%= property.details_url %>">See in Zoopla</a></p>
     <p>
         <button class="btn btn-default" type="button">See details</button>
         <button class="btn btn-primary" type="button">Save property</button>

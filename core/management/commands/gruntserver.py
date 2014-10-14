@@ -17,14 +17,16 @@ class Command(StaticfilesRunserverCommand):
     def start_grunt(self):
         self.stdout.write('>>> Starting grunt')
         self.grunt_process = subprocess.Popen(
-            ['grunt --gruntfile={0}/Gruntfile.js --base=.'.format(settings.PROJECT_PATH)],
+            ['grunt --gruntfile={0}/Gruntfile.js --base=.'.format(
+                settings.PROJECT_PATH)],
             shell=True,
             stdin=subprocess.PIPE,
             stdout=self.stdout,
             stderr=self.stderr,
         )
 
-        self.stdout.write('>>> Grunt process on pid {0}'.format(self.grunt_process.pid))
+        self.stdout.write('>>> Grunt process on pid {0}'.format(
+            self.grunt_process.pid))
 
         def kill_grunt_process(pid):
             self.stdout.write('>>> Closing grunt process')
